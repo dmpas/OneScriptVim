@@ -44,8 +44,8 @@ syn match  onescriptNumber		"\<\d\+\.\d*\>"
 syn match  onescriptNumber		"\.\d\+\>"
 
 " String and Character contstants
-syn match   onescriptSpecial contained "\\\d\d\d\|\\."
-syn region  onescriptString		  start=+"+  skip=+\\\\\|\\"+  end=+"+  contains=onescriptSpecial
+" syn match   onescriptSpecial contained "\\\d\d\d\|\\."
+syn region  onescriptString		  start=+"\||+  end=+"\|$+ 
 
 syn region  onescriptComment	start="//" end="$" contains=onescriptTodo
 
