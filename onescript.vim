@@ -25,6 +25,7 @@ syn keyword onescriptStatement	перем знач экспорт прерват
 syn keyword onescriptStatement	попытка исключение конецпопытки вызватьисключение
 syn keyword onescriptStatement	и не в или 
 syn keyword onescriptStatement	истина ложь
+syn keyword onescriptStatement	новый 
 
 syn keyword onescriptFunction	число дата строка 
 syn keyword onescriptFunction	текущаядата 
@@ -32,6 +33,8 @@ syn keyword onescriptFunction	сообщить
 syn keyword onescriptFunction	найтифайлы копироватьфайл переместитьфайл удалитьфайл
 syn keyword onescriptFunction	началодня конецдня началомесяца конецмесяца началогода конецгода началоквартала конецквартала
 syn keyword onescriptFunction	добавитьмесяц
+
+syn keyword onescriptFunction	врег нрег трег нстр найти стрзаменить 
 
 
 syn keyword onescriptTodo contained	TODO
