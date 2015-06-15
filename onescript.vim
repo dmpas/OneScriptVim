@@ -18,9 +18,9 @@ set cpo&vim
 
 syntax case ignore
 
-syn keyword onescriptStatement	если тогда иначеесли конецесли
+syn keyword onescriptStatement	если тогда иначеесли конецесли иначе
 syn keyword onescriptStatement	для каждого из пока цикл по конеццикла
-syn keyword onescriptStatement	процедура функция конецпроцедуры конецфункции
+syn keyword onescriptStatement	процедура функция конецпроцедуры конецфункции возврат
 syn keyword onescriptStatement	перем знач экспорт прервать продолжить
 syn keyword onescriptStatement	попытка исключение конецпопытки вызватьисключение
 syn keyword onescriptStatement	и не в или 
