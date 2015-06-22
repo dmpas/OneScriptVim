@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	OneScript
 " Maintainer:	Sergey Batanov <sergey.batanov@dmpas.ru>
-" Last Change:  2015-06-11
+" Last Change:  2015-06-22
 
 " Однопись для Вима 
 
@@ -51,6 +51,7 @@ syn match  onescriptNumber		"\.\d\+\>"
 syn region  onescriptString		  start=+"\||+  end=+"\|$+ 
 
 syn region  onescriptComment	start="//" end="$" contains=onescriptTodo
+syn region  onescriptPreprocessor start="#" end="$"
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
@@ -72,11 +73,11 @@ if version >= 508 || !exists("did_onescript_syntax_inits")
   HiLink onescriptStatement	Statement
   HiLink onescriptString		String
   HiLink onescriptComment		Comment
+  HiLink onescriptPreprocessor		Comment
   HiLink onescriptSpecial		Special
   HiLink onescriptTodo		Todo
   HiLink onescriptFunction		Identifier
   HiLink onescriptTypeSpecifier Type
-  HiLink onescriptFilenumber onescriptTypeSpecifier
   "hi onescriptMathsOperator term=bold cterm=bold gui=bold
 
   delcommand HiLink
