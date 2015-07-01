@@ -85,6 +85,8 @@ endif
 
 let b:current_syntax = "onescript"
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
+set number
+set nowrap
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
