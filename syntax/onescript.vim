@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	OneScript
 " Maintainer:	Sergey Batanov <sergey.batanov@dmpas.ru>
-" Last Change:  2015-06-22
+" Last Change:  2015-12-21
 
 " Однопись для Вима 
 
