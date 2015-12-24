@@ -87,6 +87,15 @@ let b:current_syntax = "onescript"
 set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
 set number
 set nowrap
+set foldmethod=syntax
+
+syntax region osFoldProcedure 
+	\ start="\<Процедура\>"
+	\ end="\<КонецПроцедуры\>"
+	\ transparent fold
+	\ keepend extend
+	\ skip=+"\/\/"
+
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
