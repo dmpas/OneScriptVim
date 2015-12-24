@@ -64,19 +64,19 @@ if version >= 508 || !exists("did_onescript_syntax_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink onescriptLabel		Label
-  HiLink onescriptConditional	Conditional
-  HiLink onescriptRepeat		Repeat
-  HiLink onescriptLineNumber	Comment
-  HiLink onescriptNumber		Number
-  HiLink onescriptError		Error
-  HiLink onescriptStatement	Statement
-  HiLink onescriptString		String
-  HiLink onescriptComment		Comment
-  HiLink onescriptPreprocessor		Comment
-  HiLink onescriptSpecial		Special
-  HiLink onescriptTodo		Todo
-  HiLink onescriptFunction		Identifier
+  HiLink onescriptLabel         Label
+  HiLink onescriptConditional   Conditional
+  HiLink onescriptRepeat        Repeat
+  HiLink onescriptLineNumber    Comment
+  HiLink onescriptNumber        Number
+  HiLink onescriptError         Error
+  HiLink onescriptStatement     Statement
+  HiLink onescriptString        String
+  HiLink onescriptComment       Comment
+  HiLink onescriptPreprocessor  Comment
+  HiLink onescriptSpecial       Special
+  HiLink onescriptTodo          Todo
+  HiLink onescriptFunction      Identifier
   HiLink onescriptTypeSpecifier Type
   "hi onescriptMathsOperator term=bold cterm=bold gui=bold
 
