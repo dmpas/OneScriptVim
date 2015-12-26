@@ -20,12 +20,21 @@ syntax case ignore
 
 syn keyword onescriptStatement	если тогда иначеесли конецесли иначе
 syn keyword onescriptStatement	для каждого из пока цикл по конеццикла
-syn keyword onescriptStatement	процедура функция конецпроцедуры конецфункции возврат
+syn keyword onescriptStatement	возврат
 syn keyword onescriptStatement	перем знач экспорт прервать продолжить
 syn keyword onescriptStatement	попытка исключение конецпопытки вызватьисключение
 syn keyword onescriptStatement	и не в или 
 syn keyword onescriptStatement	истина ложь
 syn keyword onescriptStatement	новый 
+
+syn keyword onescriptStatement	if then elseif endif else
+syn keyword onescriptStatement	for each from while do to enddo
+syn keyword onescriptStatement	return
+syn keyword onescriptStatement	var val export break continue
+syn keyword onescriptStatement	try except endtry raise
+syn keyword onescriptStatement	and not in or 
+syn keyword onescriptStatement	true false
+syn keyword onescriptStatement	new 
 
 syn keyword onescriptFunction	число дата строка 
 syn keyword onescriptFunction	текущаядата 
@@ -89,12 +98,19 @@ set number
 set nowrap
 set foldmethod=syntax
 
-syntax region osFoldProcedure 
-	\ start="\<Процедура\>"
-	\ end="\<КонецПроцедуры\>"
+syntax region osFoldFunction
+	\ matchgroup=onescriptStatement
+	\ start="\cфункция\|function"
+	\ end="\cконецфункции\|endfunction"
 	\ transparent fold
 	\ keepend extend
-	\ skip=+"\/\/"
+
+syntax region osFoldProcedure 
+	\ matchgroup=onescriptStatement
+	\ start="\cпроцедура\|procedure"
+	\ end="\cконецпроцедуры\|endprocedure"
+	\ transparent fold
+	\ keepend extend
 
 
 let &cpo = s:cpo_save
