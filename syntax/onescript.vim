@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	OneScript
 " Maintainer:	Sergey Batanov <sergey.batanov@dmpas.ru>
-" Last Change:  2015-12-21
+" Last Change:  2016-01-12
 
 " Однопись для Вима 
 
@@ -24,7 +24,7 @@ syn keyword onescriptStatement	возврат
 syn keyword onescriptStatement	перем знач экспорт прервать продолжить
 syn keyword onescriptStatement	попытка исключение конецпопытки вызватьисключение
 syn keyword onescriptStatement	и не в или 
-syn keyword onescriptStatement	истина ложь
+syn keyword onescriptStatement	истина ложь неопределено
 syn keyword onescriptStatement	новый 
 
 syn keyword onescriptStatement	if then elseif endif else
@@ -33,7 +33,7 @@ syn keyword onescriptStatement	return
 syn keyword onescriptStatement	var val export break continue
 syn keyword onescriptStatement	try except endtry raise
 syn keyword onescriptStatement	and not in or 
-syn keyword onescriptStatement	true false
+syn keyword onescriptStatement	true false undefined
 syn keyword onescriptStatement	new 
 
 syn keyword onescriptFunction	число дата строка 
@@ -61,6 +61,8 @@ syn region  onescriptString		  start=+"\||+  end=+"\|$+
 
 syn region  onescriptComment	start="//" end="$" contains=onescriptTodo
 syn region  onescriptPreprocessor start="#" end="$"
+
+syn match  onescriptSpecial display '[{}()\[\].;=+<>-\*\/]'
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
