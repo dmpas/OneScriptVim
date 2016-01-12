@@ -45,8 +45,9 @@ syn keyword onescriptFunction	добавитьмесяц
 
 syn keyword onescriptFunction	врег нрег трег нстр найти стрзаменить 
 
-
 syn keyword onescriptTodo contained	TODO
+
+" syn match onescriptIdentifier   "\<[а-яё]*\>"
 
 "integer number, or floating point number without a dot.
 syn match  onescriptNumber		"\<\d\+\>"
@@ -62,8 +63,9 @@ syn region  onescriptString		  start=+"\||+  end=+"\|$+
 syn region  onescriptComment	start="//" end="$" contains=onescriptTodo
 syn region  onescriptPreprocessor start="#" end="$"
 
-syn match  onescriptSpecial display '[{}()\[\].;=+<>-\*]'
+syn match  onescriptSpecial display '[{}()\[\]\.;=+<>-]'
 syn match  onescriptSpecial display '\/[^\/]'
+syn match  onescriptSpecial display '\*'
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
@@ -90,6 +92,7 @@ if version >= 508 || !exists("did_onescript_syntax_inits")
   HiLink onescriptTodo          Todo
   HiLink onescriptFunction      Identifier
   HiLink onescriptTypeSpecifier Type
+  HiLink onescriptIdentifier    Normal 
   "hi onescriptMathsOperator term=bold cterm=bold gui=bold
 
   delcommand HiLink
