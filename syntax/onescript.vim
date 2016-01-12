@@ -62,7 +62,8 @@ syn region  onescriptString		  start=+"\||+  end=+"\|$+
 syn region  onescriptComment	start="//" end="$" contains=onescriptTodo
 syn region  onescriptPreprocessor start="#" end="$"
 
-syn match  onescriptSpecial display '[{}()\[\].;=+<>-\*\/]'
+syn match  onescriptSpecial display '[{}()\[\].;=+<>-\*]'
+syn match  onescriptSpecial display '\/[^\/]'
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
