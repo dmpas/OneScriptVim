@@ -106,15 +106,15 @@ set foldmethod=syntax
 
 syntax region osFoldFunction
 	\ matchgroup=onescriptStatement
-	\ start="\cфункция\|function"
-	\ end="\cконецфункции\|endfunction"
+	\ start="\c\<функция\>\|\<function\>"
+	\ end="\c\<конецфункции\>\|\<endfunction\>"
 	\ transparent fold
 	\ keepend extend
 
 syntax region osFoldProcedure 
 	\ matchgroup=onescriptStatement
-	\ start="\cпроцедура\|procedure"
-	\ end="\cконецпроцедуры\|endprocedure"
+	\ start="\c\<процедура\>\|\<procedure\>"
+	\ end="\c\<конецпроцедуры\>\|\<endprocedure\>"
 	\ transparent fold
 	\ keepend extend
 
