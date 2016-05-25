@@ -62,6 +62,7 @@ syn region  onescriptString		  start=+"\||+  end=+"\|$+
 
 syn region  onescriptComment	start="//" end="$" contains=onescriptTodo
 syn region  onescriptPreprocessor start="#" end="$"
+syn region  onescriptDirective start="&" end="$"
 
 syn match  onescriptSpecial display '[{}()\[\]\.;=+<>-]'
 syn match  onescriptSpecial display '\/[^\/]'
@@ -87,7 +88,8 @@ if version >= 508 || !exists("did_onescript_syntax_inits")
   HiLink onescriptStatement     Statement
   HiLink onescriptString        String
   HiLink onescriptComment       Comment
-  HiLink onescriptPreprocessor  Comment
+  HiLink onescriptPreprocessor  PreProc
+  HiLink onescriptDirective     PreProc
   HiLink onescriptSpecial       Special
   HiLink onescriptTodo          Todo
   HiLink onescriptFunction      Identifier
