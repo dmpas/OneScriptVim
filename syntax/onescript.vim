@@ -120,6 +120,12 @@ syntax region osFoldProcedure
 	\ transparent fold
 	\ keepend extend
 
+syntax region osSnowRegion
+	\ matchgroup=NONE
+	\ start="//{"
+	\ end="//}"
+	\ transparent fold
+	\ keepend extend
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
