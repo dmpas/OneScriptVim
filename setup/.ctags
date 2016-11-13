@@ -1,0 +1,6 @@
+--langdef=onescript
+--langmap=onescript:.os.1src.bsl.e8s
+--regex-onescript=/^[ \t]*Функция[ \t]+([^\(]*)/\1/f,function,functions/i
+--regex-onescript=/^[ \t]*Function[ \t]+([^\(]*)/\1/f,function,functions/i
+--regex-onescript=/^[ \t]*Процедура[ \t]+([^\(]*)/\1/p,procedure,procedures/i
+--regex-onescript=/^[ \t]*Procedure[ \t]+([^\(]*)/\1/p,procedure,procedures/i
